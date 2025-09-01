@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App.css */
+
+:root {
+  --color-primary: #0078d4;
+  --color-secondary: #e0e0e0;
+  --color-background: #f5f5f5;
+  --color-text: #333;
+  --color-footer-bg: #333;
+  --color-footer-text: white;
+
+  --font-family: 'Roboto', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+
+  --padding-small: 0.5rem;
+  --padding-medium: 1rem;
+  --padding-large: 1.5rem;
+
+  --border-radius: 5px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.App-header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--padding-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+}
+
+.login-button {
+  background-color: white;
+  color: var(--color-primary);
+  border: none;
+  padding: var(--padding-small) var(--padding-medium);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/* Landing Page */
+.landing-main {
+  text-align: center;
+  margin: var(--padding-large) auto;
+  padding: var(--padding-medium);
+  max-width: 600px;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.get-started {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--padding-small) var(--padding-large);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  margin-top: var(--padding-medium);
+}
+
+/* Tutorial */
+.tutorial {
+  margin: var(--padding-medium);
+  padding: var(--padding-medium);
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.dismiss-tutorial {
+  background-color: var(--color-secondary);
+  border: none;
+  padding: var(--padding-small) var(--padding-medium);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/* Home Page */
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding-medium);
+  margin: var(--padding-medium);
+}
+
+.files-section, .indexes-section {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: var(--padding-medium);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.file-actions button, .indexes-section button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--padding-small) var(--padding-medium);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin-bottom: var(--padding-medium);
+}
+
+.file-categories ul, .index-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.file-categories li, .index-list li {
+  margin: var(--padding-small) 0;
+  padding: var(--padding-small);
+  background: var(--color-background);
+  border-radius: var(--border-radius);
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: var(--padding-medium);
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--padding-medium);
+}
+
+.footer li {
+  cursor: pointer;
+}
+
+/* ----------------------------- */
+/* Custom Scrollbar Styles       */
+/* ----------------------------- */
+
+/* For WebKit browsers (Chrome, Safari, Edge, Opera) */
+
+/* Target the scrollbar itself */
+.custom-div-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Target the track (the area the thumb slides in) */
+.custom-div-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+/* Target the thumb (the draggable part) */
+.custom-div-scrollbar::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.300');
+  border-radius: 5px;
+  border: 2px solid theme('colors.gray.100');
+}
+
+/* Hover state for the thumb */
+.custom-div-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gray.400');
+}
+
+/* Optional: Styles for the scrollbar corner (where horizontal and vertical meet) */
+.custom-div-scrollbar::-webkit-scrollbar-corner {
+  background: theme('colors.gray.300');
+}
+
+/* For Firefox (more limited styling options) */
+
+.custom-div-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.gray.300') transparent; /* thumb color - track color */
+}
+
+/* ----------------------------- */
+/* END Custom Scrollbar Styles   */
+/* ----------------------------- */
